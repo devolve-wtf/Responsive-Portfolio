@@ -38,21 +38,33 @@ var closeButton = document.getElementById('CloseModal');
 var modalImage = document.getElementById('ModalImage');
 var thumbnails = document.getElementsByClassName('thumbnail');
 var projectLink = document.getElementById('ProjectLink');
+var main = document.getElementById('Main');
 
 function closeModal() {
 	closeButton.addEventListener('click', function() {
+		main.classList.remove('faded');
 		modal.className = 'display-none';
 	});
 }
 
 function openModal() {
+
+	var y = 0;
+
+	window.onscroll = function(e) {
+		y = window.scrollY - 50 + 'px';
+	}
+
 	for(var i = 0; i < thumbnails.length; i++) {
 		thumbnails[i].addEventListener('click', function() {
 			var imageSrc = this.getAttribute('src');
 			var link = this.getAttribute('data');
 			modalImage.setAttribute('src', imageSrc);
-			projectLink.setAttribute('href', link)
+			projectLink.setAttribute('href', link);
+			modal.style.marginTop = y;
+			main.className = 'wrapper faded';
 			modal.classList.remove('display-none');
+			console.log(y);
 		});
 	}
 }

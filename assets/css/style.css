@@ -70,6 +70,10 @@ div {
 	box-sizing: border-box;
 }
 
+.faded {
+	opacity: 0.3;
+}
+
 footer {
 	background-color: #666666;
 	border-top: 6px solid #4aaaa5;
@@ -128,6 +132,7 @@ footer {
 }
 
 .grid__item img {
+	width: 100%;
 	max-width: 100%;
 }
 
@@ -184,6 +189,7 @@ main section {
 #Modal {
 	background-color: rgba(0,0,0,0.77);
 	width: 1024px;
+	max-width: 100%;
 	margin: 0 auto;
 	position: absolute;
 	left: 0;
@@ -308,6 +314,78 @@ p {
 .wrapper {
 	position: relative;
 	margin: 0 auto;
-	max-width: 100%;
 	width: 960px;
+	max-width: 100%;
+}
+
+/******Responsive Styles************
+***********************************/
+
+@media screen and (max-width: 980px) {
+	#ProfilePic {
+		float: none;
+		margin-bottom: 1rem;
+		padding: 0;
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+
+	.box:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	main section {
+		display: block;
+	}
+
+	#PageContent {
+		margin-bottom: 1rem;
+		padding-right: 1rem;
+		width: 100%;
+	}
+
+	#ProfilePic {
+		float: left;
+		padding: 0 1rem 1rem 0;
+		width: 50%;
+	}
+
+	#Sidebar {
+		width: 100%;
+	}
+
+	.wrapper {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+
+	.grid__item {
+		display: block;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		width: 100%;
+	}
+
+	.grid__item h4 {
+		border-right: 0;
+	}
+
+
+	#ProfilePic {
+		float: none;
+		margin-bottom: 1rem;
+		padding: 0;
+		width: 100%;
+	}
+
+	#Sidebar {
+		margin-bottom: 2rem;
+	}
+	
 }
