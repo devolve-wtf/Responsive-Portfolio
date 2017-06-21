@@ -376,6 +376,29 @@ p {
 		border-right: 0;
 	}
 
+	header h1 {
+		width: 100%;
+	}
+
+	header nav {
+		display: block;
+		padding: 1rem;
+		position: relative;
+	}
+
+	header nav ul {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	header nav ul li {
+		display: inline-block;
+	}
+	
+	header .wrapper {
+		padding: 0;
+	}
 
 	#ProfilePic {
 		float: none;
