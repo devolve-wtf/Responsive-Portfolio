@@ -78,6 +78,9 @@ function openModal() {
 **/
 document.addEventListener("DOMContentLoaded", function(event) {
 	currentYear(year);
-	closeModal();
-	openModal();
+
+	if(window.location.href.indexOf('portfolio') > -1) {
+		closeModal();
+		openModal();
+	}
 });
