@@ -52,8 +52,12 @@ function openModal() {
 	var y = 0;
 
 	window.onscroll = function(e) {
-		y = window.scrollY - 50 + 'px';
-	}
+		if(window.scrollY > 50) {
+			y = window.scrollY - 50 + 'px';
+		}else{
+			y = 0;
+		}
+	};
 
 	for(var i = 0; i < thumbnails.length; i++) {
 		thumbnails[i].addEventListener('click', function() {
